@@ -1,15 +1,14 @@
 import {DURATION_TYPES, TYPES_TO_SECONDS} from "../const";
 
 /**
- * Renders number as time duration
+ * Convert number to time duration
  *
  * @param {number} duration
  * @param {('minute'|'second'|'hour'|'day'|'week')} type of duration
- * @param {string[]} [config=['day', 'hour', 'minute', 'second']] what durations should be included
  * @return {string}
  * @customfunction
  */
-export function FORMAT_DURATION(duration, type, config = ['day', 'hour', 'minute', 'second']) {
+export function FORMAT_DURATION(duration, type) {
     if(type === undefined){
         throw `duration type is not specified`;
     }
@@ -20,7 +19,7 @@ export function FORMAT_DURATION(duration, type, config = ['day', 'hour', 'minute
     }
 
     const response = [];
-    config = new Set(config);
+    const config = new Set(['day', 'hour', 'minute', 'second']);
 
     if(TYPES_TO_SECONDS[type] === undefined){
         throw `unsupported time duration ${type}`;
