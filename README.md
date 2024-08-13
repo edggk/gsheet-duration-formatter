@@ -21,16 +21,18 @@ Must be one of `'minute'`, `'second'`, `'hour'`, `'day'`, or `'week'`.
 #### Example
 `=FORMATTED_DURATION_TO_SECONDS("0d 2h 5m 0s") Returns: 7500`
 
-`FORMATTED_DURATION_SUM(duration1:string, duration2: string) Returns: string`
+`FORMATTED_DURATION_SUM(duration1:string, duration2: string, ...more) Returns: string`
 - `duration1` - The formatted duration string
 - `duration2` - The formatted duration string
+- as many as you need
 
 #### Example
 `=FORMATTED_DURATION_SUM("0d 2h 5m 0s", "1d 2h 25m 0s") Returns: "1d 4h 30m 0s"`
 
-`FORMATTED_DURATION_SUB(duration1:string, duration2: string) Returns: string`
+`FORMATTED_DURATION_SUB(duration1:string, duration2: string, ...more) Returns: string`
 - `duration1` - The formatted duration string
 - `duration2` - The formatted duration string
+- as many as you need
 
 #### Example
 `=FORMATTED_DURATION_SUB("1d 2h 5m 0s", "0d 2h 5m 0s") Returns: "1d 0h 0m 0s"`
