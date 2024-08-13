@@ -34,3 +34,7 @@ Must be one of `'minute'`, `'second'`, `'hour'`, `'day'`, or `'week'`.
 
 #### Example
 `=FORMATTED_DURATION_SUB("1d 2h 5m 0s", "0d 2h 5m 0s") Returns: "1d 0h 0m 0s"`
+
+### Build
+
+To build run `npm run build`. Results are stored in `./dist` folder 
